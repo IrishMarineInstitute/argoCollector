@@ -3,7 +3,7 @@ Collect Argo float profiles as NetCDF from the Data Assembly Centre and push to 
 
 ## Requirements
 - Developed on Python 2.7
-- Dependencies are detailied in the requirements.txt file
+- Dependencies are detailied in the [requirements.txt][https://github.com/IrishMarineInstitute/argoFTPCollector/blob/master/requirements.txt] file
   - netcdf4==1.2.4
   - pykafka==2.3.1
   - pupynere==1.0.15
