@@ -1,5 +1,5 @@
 {
-    "logfile": "c:/users/aleadbetter/documents/python/argo_log.txt", 
+    "logfile": "~/logs/argo_log.txt", 
     "baseURL": {
         "url": "http://www.usgodae.org/ftp/outgoing/argo/dac/bodc/{floatID}/profiles/R{floatID}_{profileID}.nc", 
         "padProfileID": 3
