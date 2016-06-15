@@ -1,5 +1,5 @@
 # argoFTPCollector
-Collect Argo float profiles as NetCDF from the Data Assembly Centre and push to Erddap via Kafka
+Collect Argo float profiles as NetCDF from the Global Data Assembly Centre and push to Erddap via Kafka
 
 ## Requirements
 - Developed on Python 2.7
