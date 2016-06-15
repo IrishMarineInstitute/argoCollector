@@ -24,7 +24,7 @@ The control file is a JSON file which specifies various parameters
   - topic - a string giving the topic to send messages to
   - server - a string identifying the server on which the topic is hosted
 
-An example control file is given below
+An example control file is given below, and [here](https://github.com/IrishMarineInstitute/argoFTPCollector/blob/master/argo.json)
 ```javascript
 {
     "logfile": "~/logs/argo_log.txt", 
