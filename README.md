@@ -19,7 +19,7 @@ The control file is a JSON file which specifies various parameters
   -  padProfileID - An integer giving how many digits to pad the profile ID out to (i.e. for a pattern of 001, 002, 003 use 3)
 - floats - A JSON object of multiple "floatID": lastProfileIDProcessed key-value-pairs
   - floatID - A string identifying this float
-  - lastProfileIDProcessed - An integer giving the last profile processed for this float. Use null to begin with the last profile received by the GDAC
+  - lastProfileIDProcessed - An integer giving the last profile processed for this float. Use null to begin with the last profile. received by the GDAC. Use 0 to start from the first profile received for a given float
 - kafka - a JSON object
   - topic - a string giving the topic to send messages to
   - server - a string identifying the server on which the topic is hosted
