@@ -1,13 +1,16 @@
 # argoFTPCollector
 Collect Argo float profiles as NetCDF from the Data Assembly Centre and push to Erddap via Kafka
+
 ## Requirements
 - Developed on Python 2.7
 - Dependencies are detailied in the requirements.txt file
   - netcdf4==1.2.4
   - pykafka==2.3.1
   - pupynere==1.0.15
+
 ## Invocation
 python argoFTPCollector.py -c /path/to/controlfile.json
+
 ## Control File
 The control file is a JSON file which specifies various parameters
 - logfile
