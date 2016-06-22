@@ -1,4 +1,4 @@
-# argoFTPCollector
+# argoCollector
 Collect Argo float profiles as NetCDF from the Global Data Assembly Centre and push to Erddap via Kafka
 
 ## Requirements
