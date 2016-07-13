@@ -9,6 +9,7 @@ from scipy.io import netcdf
 import parsedatetime as pdt
 import os
 from tempfile import mkstemp
+import pystache
 
 class HttpModule:
 
@@ -16,9 +17,11 @@ class HttpModule:
     logging.getLogger("requests").setLevel(logging.WARNING)
 
   def format_url(self,base_url,floats,index,quality,pad):
-      return base_url.replace("{floatID}",
-              str(floats)).replace("{profileID}",
-              str(index).zfill(pad)).replace("{quality}",str(quality))
+      return pystache.render(base_url,{
+             "floatID": floats,
+             "profileID": str(index).zfill(pad),
+             "quality": quality
+          })
 
   def produce(self,data):
     base_url = data["http"]["url"]
@@ -30,7 +33,7 @@ class HttpModule:
       for floats in data["floats"]:
         # Handle null profile number for this float - just get the last profile
         if data["floats"][floats] is None:
-            url = base_url.replace("{floatID}", str(floats)).rsplit("/", 1)[0]
+            url = pystache.render(base_url, {"floatID": floats} ).rsplit("/", 1)[0]
             idx = requests.get(url)
             if idx.status_code == 404:
                 raise Exception("Internet", "Could not load FTP index {0}".format(url))
