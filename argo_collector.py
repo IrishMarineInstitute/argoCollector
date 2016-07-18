@@ -6,6 +6,7 @@ import argparse
 import importlib
 import os
 import signal
+import requests
 
 
 def signal_handler(signal, frame):
@@ -33,7 +34,9 @@ if __name__ == "__main__":
               help="commit increments to the configuration")
     parser.add_argument('--no-commit', dest='commit', action='store_false',
               help="don't commit increments to the configuration")
-    parser.set_defaults(commit=True)
+
+    parser.add_argument('--callback-url', dest='callback_url', help="url to call after nc file is fetched")
+    parser.set_defaults(commit=True,callback_url=None)
 
     args = parser.parse_args()
     config = None
@@ -54,4 +57,6 @@ if __name__ == "__main__":
             with open(args.config+".new", "w") as outfile:
                 json.dump(cfg, outfile, indent=4)
             os.rename(args.config+".new",args.config)
+        if args.callback_url:
+           requests.get(args.callback_url)
 
