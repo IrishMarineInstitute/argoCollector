@@ -10,3 +10,4 @@ scipy==0.17.1
 six==1.10.0
 tabulate==0.7.5
 wsgiref==0.1.2
+pystache
