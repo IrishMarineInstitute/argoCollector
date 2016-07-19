@@ -15,7 +15,8 @@ signal.signal(signal.SIGINT, signal_handler)
 
 def is_valid_file(parser, arg, result):
     if not os.path.exists(arg):
-        parser.error("The file %s does not exist!" % arg)
+       if not os.path.exists("{0}/{1}".format(os.path.dirname(os.path.abspath(__file__),arg))
+          parser.error("The file %s does not exist!" % arg)
     return result
 
 
