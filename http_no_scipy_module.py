@@ -81,7 +81,7 @@ class HttpModule:
                     yield (data, result)
                 except AssertionError:
                     pass
-            for i in range(5*10):
+            for i in range(1*10):
                time.sleep(0.1)
 
     finally:

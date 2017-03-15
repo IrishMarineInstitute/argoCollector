@@ -1,0 +1,10 @@
+#!/bin/sh
+# get the flag key from the erddap startup logs
+if [ -e "/opt/erddap/logs/log.txt" ]
+then
+    grep argoFloats /opt/erddap/logs/log.txt | grep -E "flagKey=[0-9]+$" | grep ^http | tail -1 | sed -e 's/.*flagKey=//' > /opt/argos/flagKey.new
+    if [ -s /opt/argos/flagKey.new ]
+    then
+      mv /opt/argos/flagKey.new /opt/argos/flagKey
+    fi
+fi
