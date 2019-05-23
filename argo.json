@@ -1,30 +1,37 @@
 {
+    "http": {
+        "url": "http://www.usgodae.org/ftp/outgoing/argo/dac/bodc/{{floatID}}/profiles/{{quality}}{{floatID}}_{{profileID}}.nc", 
+        "padProfileID": 3
+    }, 
+    "ignore_floats": {
+        "6901913": 23642
+    }, 
     "kafka": {
         "topic": "argo", 
         "hosts": "kafka01:9092,kafka02:9092,kafka03:9092", 
         "consumer_group": "argo"
     }, 
-    "logfile": "/tmp/argo_log.txt", 
-    "http": {
-        "url": "http://www.usgodae.org/ftp/outgoing/argo/dac/bodc/{{floatID}}/profiles/{{quality}}{{floatID}}_{{profileID}}.nc", 
-        "padProfileID": 3
-    }, 
     "file": {
         "target": "/opt/data/argos/{{float}}/profiles/{{basename}}"
     }, 
+    "logfile": "/tmp/argo_log.txt", 
     "floats": {
-        "6901913": 164, 
         "6900233": 132, 
-        "6901919": 87, 
+        "6901929": 47, 
         "6901915": 148, 
-        "6901914": 145, 
-        "6901922": 42, 
-        "6901923": 43, 
-        "6900444": 219, 
-        "6901921": 45, 
-        "6901924": 4, 
-        "6901925": 4, 
-        "6900658": 221, 
-        "6901920": 87
+        "6901914": 182, 
+        "6901922": 142, 
+        "6901923": 143, 
+        "6900444": 224, 
+        "6901921": 131, 
+        "6901926": 92, 
+        "6901927": 3, 
+        "6901924": 104, 
+        "6901925": 104, 
+        "6901928": 58, 
+        "6901920": 187, 
+        "6901933": 0, 
+        "6900658": 234, 
+        "6901919": 187
     }
 }
