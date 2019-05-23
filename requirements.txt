@@ -6,7 +6,7 @@ numpy==1.11.1
 parsedatetime==2.1
 pykafka==2.4.0
 pystache==0.5.4
-requests==2.10.0
+requests==2.20.0
 scipy==0.17.1
 six==1.10.0
 tabulate==0.7.5
