@@ -54,3 +54,9 @@ An example control file is given below, and [here](https://github.com/IrishMarin
     }
 }
 ```
+
+# Adding a new float
+
+To add a new float, for example 6901933, use the add_float command. Like this:
+
+```/opt/argos/add_float 6901933```
