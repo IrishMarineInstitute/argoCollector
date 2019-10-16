@@ -5,6 +5,15 @@ Collect Argo float profiles as NetCDF from the Global Data Assembly Centre and p
 - Developed on Python 2.7
 - Dependencies are detailied in the [requirements.txt](https://github.com/IrishMarineInstitute/argoCollector/blob/master/requirements.txt) file
 
+## Installation
+```
+sudo mkdir /opt/argos
+sudo chown dmuser:dmuser /opt/argos
+cd /opt/argos
+git clone https://github.com/IrishMarineInstitute/argoCollector.git .
+pip install -r requirements.txt
+```
+
 ## Invocation
 
 to store data from http to kafka:
@@ -60,3 +69,9 @@ An example control file is given below, and [here](https://github.com/IrishMarin
 To add a new float, for example 6901933, use the add_float command. Like this:
 
 ```/opt/argos/add_float 6901933```
+
+# Scheduled update
+
+Cron entry:
+
+```8 * * * * /opt/argos/update_floats >> /home/dmuser/update_floats.log 2>&1```
