@@ -15,4 +15,5 @@ git push
 3. Once float has surfaced, data should appear in [ERDDAP](https://erddap3.marine.ie?erddap/tabledap/argoFloats.html)
 4. Data is collected on an ongoing basis due to a cron job running on erddap3 server.
 5. The log file on erddap3 server can be used in diagnosing data collection problems `/home/dmuser/update_floats.log`
+6. Data management email PI that float has been added to the collector.
 
