@@ -2,7 +2,7 @@ argparse==1.2.1
 gevent==1.1.1
 greenlet==0.4.10
 kazoo==2.2.1
-numpy==1.21.0
+numpy==1.22.0
 parsedatetime==2.1
 pykafka==2.4.0
 pystache==0.5.4
