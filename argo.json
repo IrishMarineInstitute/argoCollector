@@ -1,6 +1,6 @@
 {
     "http": {
-        "url": "https://nrlgodae1.nrlmry.navy.mil/ftp/outgoing/argo/dac/bodc/{{floatID}}/profiles/{{quality}}{{floatID}}_{{profileID}}.nc", 
+        "url": "https://usgodae.org/ftp/outgoing/argo/dac/bodc/{{floatID}}/profiles/{{quality}}{{floatID}}_{{profileID}}.nc", 
         "padProfileID": 3
     }, 
     "ignore_floats": {
